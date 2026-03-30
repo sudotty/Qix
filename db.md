@@ -124,7 +124,6 @@
 
 介绍：在线异步执行F1 DDL操纵.F1团队提出了一种安全的Schema变更算法。本文将先简单介绍KV存储引擎的提供的接口，然后分析异步的Schema变更导致的问题，最后再描述F1的Schema变更算法以及其限制点。参考阅读[异步 schema 变更](https://github.com/ngaut/builddatabase/blob/master/f1/schema-change.md)。[TiDB 的异步 schema 变更实现](https://github.com/ngaut/builddatabase/blob/master/f1/schema-change-implement.md)
 
-
 - [《Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases》](https://www.allthingsdistributed.com/files/p1041-verbitski.pdf)    
 
 介绍：Aurora是一个 OLTP 的关系型数据库。这篇论文描述Aurora架构和设计时的考量。高吞吐的数据处理瓶颈，已经从计算和存储，转移到了网络。Aurora的主要是为了解决多租户scale-out、共享存储、网络瓶颈。[阅读笔记](http://www.zenlife.tk/aurora.md)、[Amazon Aurora: 云原生关系数据库的设计](https://www.allthingsdistributed.com/2019/03/Amazon-Aurora-design-cloud-native-relational-database.html)
@@ -144,6 +143,10 @@
 - [《PushdownDB: Accelerating a DBMS using S3 Computation》](https://arxiv.org/pdf/2002.05837.pdf)    
 
 介绍：这篇论文主要讲述PushdownDB 如何利用AWS S3做为存储组件。把DBMS的一些过滤、聚合、映射下发至S3并得到响应结果。其实利用S3用于底层存储AWS 在Aurora就有实现。
+
+- [《F1 Query: Declarative Querying at Scale》]([https://arxiv.org/abs/1712.01208](https://www.vldb.org/pvldb/vol11/p1835-samwel.pdf))
+
+介绍：F1 Query 是Google内部进行异构查询的引擎，它支持对各种不同的文件格式、各种不同的存储系统( Bigtable, Spanner, Google Spreadsheets ) 的数据进行联合查询。本文主要讲述 F1 Query的架构设计，计算存储分离、启发式的查询优化等。
 
 #### 学者
 
